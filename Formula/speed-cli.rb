@@ -41,6 +41,12 @@ class SpeedCli < Formula
 
       The web dashboard will be available at: http://localhost:6432
 
+      Dashboard commands:
+        speed dashboard         # Interactive mode
+        speed dashboard start   # Background service
+        speed dashboard stop    # Stop service
+        speed dashboard status  # Check status
+
       For more information, visit: https://github.com/DavidNgugi/speed-cli
     EOS
   end
