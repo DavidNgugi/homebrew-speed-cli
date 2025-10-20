@@ -1,8 +1,8 @@
 class SpeedCli < Formula
   desc "Catch your ISP throttling you! Automatic hourly monitoring with a beautiful web dashboard"
   homepage "https://github.com/DavidNgugi/speed-cli"
-  url "https://github.com/DavidNgugi/speed-cli/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "a34de05a4d8562cf1e71255778a6f06a7f4ac4b194cb4d2cff21a20897102a87"
+  url "https://github.com/DavidNgugi/speed-cli/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "76194316848af99f6f9b3ec000d845d3223a6899c712b46d030ff4984bd07a20"
   license "MIT"
   head "https://github.com/DavidNgugi/speed-cli.git", branch: "main"
 
