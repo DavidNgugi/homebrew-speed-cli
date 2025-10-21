@@ -1,12 +1,13 @@
 class SpeedCli < Formula
-  desc "Catch your ISP throttling you! Automatic hourly monitoring with a beautiful web dashboard"
+  desc "Cross-platform speed testing tool with automatic monitoring and beautiful web dashboard. Supports macOS, Linux, and Windows."
   homepage "https://github.com/DavidNgugi/speed-cli"
-  url "https://github.com/DavidNgugi/speed-cli/archive/refs/tags/v1.0.4.tar.gz"
-  sha256 "76194316848af99f6f9b3ec000d845d3223a6899c712b46d030ff4984bd07a20"
+  url "https://github.com/DavidNgugi/speed-cli/archive/refs/tags/v1.0.5.tar.gz"
+  sha256 "67926bc5e8c6a502a1b5fef15752d35e227ee0c354a961813f46525fa0cbdc83"
   license "MIT"
   head "https://github.com/DavidNgugi/speed-cli.git", branch: "main"
 
   depends_on "python@3.9"
+  depends_on "speedtest-cli" => :optional
 
   def install
     bin.install "src/speed_cli.sh" => "speed"
@@ -31,7 +32,13 @@ class SpeedCli < Formula
 
   def caveats
     <<~EOS
-      Speed CLI has been installed! 
+      Speed CLI v1.0.5 has been installed! 
+
+      🚀 NEW FEATURES:
+      • Cross-platform support for macOS, Linux, and Windows
+      • Automatic dependency management for all platforms
+      • Improved speed testing with speedtest-cli integration
+      • Reliable fallback methods when primary tools unavailable
 
       To get started:
         1. Run: speed configure
@@ -46,6 +53,11 @@ class SpeedCli < Formula
         speed dashboard start   # Background service
         speed dashboard stop    # Stop service
         speed dashboard status  # Check status
+
+      Platform-specific notes:
+        • macOS: Full support with all features
+        • Linux: Uses speedtest-cli for accurate measurements
+        • Windows: PowerShell integration with automated setup
 
       For more information, visit: https://github.com/DavidNgugi/speed-cli
     EOS
